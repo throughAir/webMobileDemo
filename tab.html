@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .clear {
+            zoom: 1;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            float: left;
+            padding: 10px 15px;
+        }
+
+        .current {
+            color: red;
+            background: #000000;
+        }
+
+        .box div {
+            width: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<ul class="clear">
+    <li>第一</li>
+    <li>第二</li>
+    <li>第三</li>
+    <li>第四</li>
+    <li>第五</li>
+</ul>
+<div class="box">
+    <div>111111111111111</div>
+    <div>222222222222222</div>
+    <div>333333333333333</div>
+    <div>444444444444444</div>
+    <div>555555555555555</div>
+</div>
+
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script>
+    //tab切换  触发时间 为 mouseover 添加延时效果
+    $.jqtab = function (tabtit, tab_conbox, shijian) {
+        var tabs = $(tabtit);
+        var tab_box = $(tab_conbox);
+        var time = null;
+        tab_box.find("div").hide();
+        tabs.find("li:first").addClass("current").show();
+        tab_box.find("div:first").show();
+        tabs.find("li").on(shijian, function () {
+            var that = $(this);
+            function way() {
+                that.addClass("current").siblings("li").removeClass("current");
+                var activeindex = tabs.find("li").index(that);
+                tab_box.children().eq(activeindex).show().siblings().hide();
+            }
+            if(shijian == "mouseover"){
+                time=setTimeout(way,500);
+            }else{
+                way();
+            }
+        });
+        if(shijian == "mouseover"){
+            tabs.find("li").on("mouseout",function(){
+                clearTimeout(time);
+            });
+        }
+    };
+    $.jqtab(".clear", ".box", "mouseover");
+</script>
+</body>
+</html>
