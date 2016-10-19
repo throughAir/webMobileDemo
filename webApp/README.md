@@ -1,4 +1,5 @@
 Demo
 ==============
 
-tab   PC 切换TAB  DEMO
+tab   PC 切换TAB
+url   PC 解析url
