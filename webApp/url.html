@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
- <p>hello word</p>
+<p>hello word</p>
 <script>
     //    var url = "http://127.0.0.1/e/action/ShowInfo.php?sdsdsdsd=sdsdsds&sdsdsdsfsfs=sdsdsdsd&dfdsds=sdsdsdsd";//定义变量
     //    function parse_url(_url) { //定义函数
@@ -74,11 +74,11 @@
         if (obj[arr[i].code]) {//如果对象里有当前的key值，obj里元素key的value 累加
             obj[arr[i].code] += 1;
             //如果有重复遍历数组
-            for(var j in arrs){
+            for (var j in arrs) {
                 //找到arrs中code值相同的
-                if(arrs[j].code == arr[i].code){
+                if (arrs[j].code == arr[i].code) {
                     //实现累加
-                    arrs[j].poll+= arr[i].poll
+                    arrs[j].poll += arr[i].poll
                 }
             }
         } else {//没出现，当前value值加1
@@ -92,25 +92,8 @@
     console.log(obj);
     console.log(arrs);
 
-   
 
-
-   
-
-
-   
-
-
-   
-
-
-   
-
-
-   
-
-
-   
+    console.log(111111);
 
 
     //    var a = {
