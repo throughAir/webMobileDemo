@@ -2,11 +2,6 @@
   "data": [
     {
       "tg_id": 22475,
-      "g_id": 4390,
-      "g_name": "#保税仓发货# The Face Shop菲诗小铺 樱桃洗面奶 170ml",
-      "g_price_shop": 18,
-      "g_price_market": 69,
-      "g_title": "可以收缩毛孔呦",
       "g_image": "http://ii.xiaohongchun.com/1472093394561_975.jpg",
       "gd_number": 130,
       "mark": null
@@ -120,6 +115,8 @@
       "g_image": "http://ii.xiaohongchun.com/1470220838996_644.jpg",
       "gd_number": 122,
       "gd_number": 122,
+      "mark": null,
+      "mark": null,
       "mark": null
     }
   ],
